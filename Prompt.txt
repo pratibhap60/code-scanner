@@ -1,0 +1,82 @@
+Code Scanner Application along with recommended features, smell categories, detection methods, and improvement suggestions. :
+
+<Technology Stack>
+	<Backend>
+		nodeJS
+		OpenAI	
+		SonarQube API
+	</Backend>
+	<Frontend>
+		Anguar dashboard
+		REST API for scanning
+	</Frontend>
+	<Storage>
+		No Storage
+	</Storage>
+</Technology Stack>
+
+
+**Application Flow
+	- Upload code / connect to repo
+	- Run parsing & static analysis
+	- Identify smells via rules + AST analysis
+	- Generate report
+	- Provide refactoring suggestions
+	- Store results for history
+	- Optionally auto-create PR with fixes (advanced)
+
+
+**Define Purpose & Scope
+ - The application should be able to:
+	- Detect code smells in source files or repositories
+	- Suggest fixes or refactoring actions
+	- Produce a report or dashboard
+	- Integrate with CI/CD to prevent regression
+
+**Core Features
+	- Code Smell Detection Engine with the Feature:
+		- Include Long Method
+		- Include Large Class
+		- Include Long Parameter List
+		- Include Magic Numbers/Strings
+		- Include God Object
+		- Include Duplicated Code
+		- Include Primitive Obsession
+		- Include Feature Envy
+		- Include Comment Smell (excessive or outdated comments)
+		- Include Shotgun Surgery
+		- Include Dead Code
+		- Include Cyclic Complexity
+		- Include Inconsistent Naming
+		- Include Poor Error Handling
+		- Include Excessive If/Else / deeply nested structures
+		- Include Switch Statements over polymorphism
+		- Include Data Clumps
+
+**Suggestions & Refactoring Tips
+	- Each smell should map to a set of recommendations:
+		- Extract Method / Extract Class
+		- Introduce Parameters Object
+		- Replace Magic Numbers with Constants
+		- Remove Dead Code
+		- Inline Temp Variables
+		- Use Polymorphism instead of Conditionals
+		- Use Dependency Injection
+		- Introduce Interface or Abstract Class
+		- Split responsibilities (SRP)
+
+**Reporting Dashboard
+	- Inlcude Smell summary per file/module
+	- Inlcude Severity scoring
+	- Inlcude Technical debt estimation
+	- Inlcude Trend visualization (smells over time)
+	- Inlcude Export as PDF/JSON
+
+<Additional Feature>
+	CI/CD Integration
+	GitHub Actions
+	GitLab CI
+	Jenkins
+	Bitbucket Pipelines
+	Fail build on high-severity smells (optional).
+</Additional Feature>
